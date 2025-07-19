@@ -8,7 +8,7 @@ Based on my paper "Securing The Kernel via Static Binary Rewriting and Program S
 * **Statically rewrites the Windows kernel image** (`ntoskrnl.exe`) or other drivers without SOURCE CODE to:
 
   * Inject custom instrumentation code
-  * Preserve original logic and relocation data
+  * Preserve original logic and other important data (ie. relocation data)
 * Implements **Program Shepherding**, tracking the **execution flow** of kernel code at runtime
 * Enforces security policies such as:
 
@@ -27,7 +27,7 @@ Based on my paper "Securing The Kernel via Static Binary Rewriting and Program S
   A runtime mechanism that monitors indirect control transfers (e.g., jumps, calls, returns) and validates them against predefined security policies.
 
 * **Custom Rewriter Toolchain**
-  Includes disassembly, binary rewriting, relocation-aware patching, and image reassembly.
+  Includes disassembler, binary rewritter, relocation-aware patching, and image reassembler.
 
 
 Keep it mind this is project from 2011 :)
